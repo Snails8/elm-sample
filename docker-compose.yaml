@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    
+    volumes:
+      - ./src:/src
+      - /src/node_modules
+
+    ports: 
+      - "7000:7000"
